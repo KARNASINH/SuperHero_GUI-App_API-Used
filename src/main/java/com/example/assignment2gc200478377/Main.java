@@ -7,8 +7,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Main extends Application
+public class Main
+    //extends Application
 {
+/*
     @Override
     public void start(Stage stage) throws IOException
     {
@@ -18,9 +20,12 @@ public class Main extends Application
         stage.setScene(scene);
         stage.show();
     }
-
+*/
     public static void main(String[] args)
     {
-        launch();
+        //launch();
+
+        ApiResponse api = APIUtility.getStockData("ABNB");
+        System.out.println(api);
     }
 }
