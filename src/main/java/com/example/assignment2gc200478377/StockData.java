@@ -1,6 +1,6 @@
 package com.example.assignment2gc200478377;
 
-public class HourlyStockData
+public class StockData
 {
     private float open, high, low, close;
 
