@@ -4,20 +4,20 @@ import com.google.gson.annotations.SerializedName;
 public class ApiResponse
 {
     @SerializedName("Meta Data")
-    private StockDetail[] metaData;
+    private MetaData metaData;
 
     @SerializedName("Time Series (Daily)")
-    private HourlyStockData[]  timeSeriesDaily;
+    private PeriodicsStockDetail timeSeriesDaily;
 
 
-
-    public StockDetail[] getMetaData()
+    public MetaData getMetaData()
     {
         return metaData;
     }
 
-    public HourlyStockData[] getTimeSeriesDaily()
+    public PeriodicsStockDetail getTimeSeriesDaily()
     {
         return timeSeriesDaily;
     }
+
 }
