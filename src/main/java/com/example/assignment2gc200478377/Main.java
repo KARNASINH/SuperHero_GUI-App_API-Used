@@ -25,7 +25,9 @@ public class Main
     {
         //launch();
 
+        System.out.println();
+
         ApiResponse api = APIUtility.getStockData("ABNB");
-        System.out.println(api);
+        System.out.println(api.getMetaData());
     }
 }

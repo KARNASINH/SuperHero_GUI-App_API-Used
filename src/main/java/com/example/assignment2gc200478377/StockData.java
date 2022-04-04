@@ -1,9 +1,23 @@
 package com.example.assignment2gc200478377;
 
+import com.google.gson.annotations.SerializedName;
+
 public class StockData
 {
-    private float open, high, low, close;
 
+    @SerializedName("1. open")
+    private float open;
+
+    @SerializedName("2. high")
+    private float high;
+
+    @SerializedName("3. low")
+    private float low;
+
+    @SerializedName("4. close")
+    private float close;
+
+    @SerializedName("5. volume")
     private int volume;
 
     public float getOpen()

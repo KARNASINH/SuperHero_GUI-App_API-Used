@@ -2,21 +2,21 @@ package com.example.assignment2gc200478377;
 
 import com.google.gson.annotations.SerializedName;
 
-public class StockDetail
+public class MetaData
 {
-    @SerializedName("Information")
+    @SerializedName("1. Information")
     private String information;
 
-    @SerializedName("Symbol")
+    @SerializedName("2. Symbol")
     private String symbol;
 
-    @SerializedName("Last Refreshed")
+    @SerializedName("3. Last Refreshed")
     private String lastRefreshed;
 
-    @SerializedName("Output Size")
+    @SerializedName("4. Output Size")
     private String outputSize;
 
-    @SerializedName("Time Zone")
+    @SerializedName("5. Time Zone")
     private String timeZone;
 
     public String getInformation()

@@ -1,5 +1,6 @@
 package com.example.assignment2gc200478377;
 import com.google.gson.Gson;
+import javafx.event.Event;
 
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -12,7 +13,7 @@ public class APIUtility
     {
         stockName = stockName.replace(" ", "%20");
 
-        String uriOriginal = "https://www.alphavantage.co/query?interval=60min&function=TIME_SERIES_DAILY&symbol=TSLA&outputsize=full&apikey=a95ba2b080msh83c3a3fe72eae71p1426fbjsn0a0c857b5ebb";
+        String uriOriginal = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=TSLA&outputsize=full&apikey=a95ba2b080msh83c3a3fe72eae71p1426fbjsn0a0c857b5ebb";
         String uri = uriOriginal.replace("TSLA", stockName);
 
 
@@ -22,10 +23,14 @@ public class APIUtility
         try
         {
             HttpResponse<String> response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+
+            //System.out.println("Karna : " + response);
             Gson gson = new Gson();
+            //System.out.println(response.body());
             return gson.fromJson(response.body(), ApiResponse.class);
 
-            //System.out.println(response.body());
+
+            //System.out.println("KBG-Body : " + gson.fromJson(response.body(), ApiResponse.class));
         } catch (Exception e)
         {
             e.printStackTrace();
