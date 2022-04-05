@@ -5,6 +5,6 @@ module com.example.assignment2gc200478377 {
     requires java.net.http;
 
 
-    opens com.example.assignment2gc200478377 to javafx.fxml, com.google.gson;;
+    opens com.example.assignment2gc200478377 to javafx.fxml, com.google.gson;
     exports com.example.assignment2gc200478377;
 }
