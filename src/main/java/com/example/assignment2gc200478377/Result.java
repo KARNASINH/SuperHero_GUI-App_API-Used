@@ -6,6 +6,7 @@ public class Result
     private String name;
     private Powerstats powerstats;
     private Appearance appearance;
+    private SuperheroImage image;
 
     public String getId()
     {
@@ -25,5 +26,10 @@ public class Result
     public Appearance getAppearance()
     {
         return appearance;
+    }
+
+    public SuperheroImage getImage()
+    {
+        return image;
     }
 }
