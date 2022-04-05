@@ -27,7 +27,7 @@ public class Main
 
         System.out.println();
 
-        ApiResponse api = APIUtility.getStockData("ABNB");
+        ApiResponse api = APIUtility.getSearchFromAPI("man");
         System.out.println(api);
     }
 }
