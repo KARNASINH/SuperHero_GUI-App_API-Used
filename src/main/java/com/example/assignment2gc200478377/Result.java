@@ -5,6 +5,7 @@ public class Result
     private String id;
     private String name;
     private Powerstats powerstats;
+    private Appearance appearance;
 
     public String getId()
     {
@@ -19,5 +20,10 @@ public class Result
     public Powerstats getPowerstats()
     {
         return powerstats;
+    }
+
+    public Appearance getAppearance()
+    {
+        return appearance;
     }
 }
