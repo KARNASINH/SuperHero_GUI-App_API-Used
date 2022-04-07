@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
@@ -36,7 +37,19 @@ public class SearchSuperheroViewController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        listView.getSelectionModel().selectedItemProperty().addListener(
+                (obs, oldSuperheroSelected, newSuperheroSelected) ->
+                {
+                    try
+                    {
+                        imageView.setImage(new Image(newSuperheroSelected.getImage().getUrl()));
+                    }
+                    catch (IllegalArgumentException e)
+                    {
 
+                        imageView.setImage(new Image("https://www.lacinefest.org/uploads/2/6/7/4/26743637/no-poster_orig.jpeg"));
+                    }
+                });
     }
 
     @FXML
