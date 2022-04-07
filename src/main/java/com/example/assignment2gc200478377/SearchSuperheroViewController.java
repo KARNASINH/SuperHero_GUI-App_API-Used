@@ -1,13 +1,18 @@
 package com.example.assignment2gc200478377;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
-public class SearchSuperheroViewController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class SearchSuperheroViewController implements Initializable
+{
 
     @FXML
     private Button getDetailsButton;
@@ -26,5 +31,20 @@ public class SearchSuperheroViewController {
 
     @FXML
     private TextField searchTextField;
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+
+    }
+
+    @FXML
+    private void searchSuperhero()
+    {
+        ApiResponse apiResponse = APIUtility.getSearchFromAPI(searchTextField.getText());
+        listView.getItems().addAll(apiResponse.getResults());
+
+    }
 
 }

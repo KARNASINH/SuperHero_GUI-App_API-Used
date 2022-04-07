@@ -32,4 +32,9 @@ public class Result
     {
         return image;
     }
+
+    public String toString()
+    {
+        return String.format(id + "-" + name);
+    }
 }
