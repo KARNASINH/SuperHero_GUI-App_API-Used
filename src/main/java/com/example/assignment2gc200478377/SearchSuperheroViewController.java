@@ -37,6 +37,9 @@ public class SearchSuperheroViewController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        getDetailsButton.setVisible(false);
+        notFoundLabel.setText("");
+
         listView.getSelectionModel().selectedItemProperty().addListener(
                 (obs, oldSuperheroSelected, newSuperheroSelected) ->
                 {
@@ -46,8 +49,11 @@ public class SearchSuperheroViewController implements Initializable
                     }
                     catch (IllegalArgumentException e)
                     {
-
-                        imageView.setImage(new Image("https://www.lacinefest.org/uploads/2/6/7/4/26743637/no-poster_orig.jpeg"));
+                        imageView.setImage(new Image("https://ih1.redbubble.net/image.1893341687.8294/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg"));
+                    }
+                    catch (NullPointerException e)
+                    {
+                        imageView.setImage(new Image("https://ih1.redbubble.net/image.1893341687.8294/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg"));
                     }
                 });
     }
@@ -56,8 +62,18 @@ public class SearchSuperheroViewController implements Initializable
     private void searchSuperhero()
     {
         ApiResponse apiResponse = APIUtility.getSearchFromAPI(searchTextField.getText());
-        listView.getItems().addAll(apiResponse.getResults());
+        listView.getItems().clear();
 
+        if(apiResponse.getResults() != null)
+        {
+            listView.getItems().addAll(apiResponse.getResults());
+            notFoundLabel.setText("");
+        }
+        else
+        {
+            notFoundLabel.setText("Super Hero not found");
+            imageView.setImage(new Image("https://ih1.redbubble.net/image.1893341687.8294/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg"));
+        }
     }
 
 }
