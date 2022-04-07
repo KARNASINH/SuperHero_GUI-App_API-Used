@@ -1,14 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.assignment2gc200478377.SuperheroDetailsViewController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment2gc200478377.SuperheroDetailsViewController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="300.0" text="Appearance" />
+                  <GridPane prefHeight="300.0" prefWidth="300.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Gender" />
+                        <Label fx:id="genderLabel" text="Label" GridPane.columnIndex="1" />
+                        <Label text="Race" GridPane.rowIndex="1" />
+                        <Label fx:id="raceLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Height (in inches)" GridPane.rowIndex="2" />
+                        <Label fx:id="heightInchLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Height (in cm)" GridPane.rowIndex="3" />
+                        <Label fx:id="heightCmLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Weight (in lbs)" GridPane.rowIndex="4" />
+                        <Label fx:id="weightLbLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Weight (in kgs)" GridPane.rowIndex="5" />
+                        <Label fx:id="weightKgLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="Eye Colour" GridPane.rowIndex="6" />
+                        <Label fx:id="eyeColourLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label text="Hair Colour" GridPane.rowIndex="7" />
+                        <Label fx:id="hairColourLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </left>
+         <right>
+            <VBox prefHeight="300.0" prefWidth="300.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="300.0" text="Power Statics" />
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Intelligence" />
+                        <Label fx:id="intelligenceLabel" text="Label" GridPane.columnIndex="1" />
+                        <Label text="Strength" GridPane.rowIndex="1" />
+                        <Label fx:id="strengthLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Speed" GridPane.rowIndex="2" />
+                        <Label fx:id="speedLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Durability" GridPane.rowIndex="3" />
+                        <Label fx:id="durabilityLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Power" GridPane.rowIndex="4" />
+                        <Label fx:id="powerLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Combat" GridPane.rowIndex="5" />
+                        <Label fx:id="combatLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </right>
+         <bottom>
+            <Button mnemonicParsing="false" text="Back" BorderPane.alignment="CENTER" />
+         </bottom>
+         <top>
+            <Label fx:id="superheroTitleLabel" text="Superhero Title" BorderPane.alignment="CENTER" />
+         </top>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </BorderPane>
+   </children>
 </AnchorPane>
