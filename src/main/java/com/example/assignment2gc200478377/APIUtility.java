@@ -30,4 +30,24 @@ public class APIUtility
 
         return null;
     }
+
+    public static Result getSuperhero(String id)
+    {
+        String uri = "https://www.superheroapi.com/api.php/1310202806140671/" + id;
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest httpRequest = HttpRequest.newBuilder().uri(URI.create(uri)).build();
+
+        try {
+            HttpResponse<String> response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+
+            Gson gson = new Gson();
+            return gson.fromJson(response.body(), Result.class);
+
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
 }
