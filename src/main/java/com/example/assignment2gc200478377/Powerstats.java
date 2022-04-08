@@ -10,26 +10,68 @@ public class Powerstats
     private String combat;
 
     public String getIntelligence() {
-        return intelligence;
+        if (intelligence.equalsIgnoreCase("null"))
+        {
+            return "-";
+        }
+        else
+        {
+            return intelligence;
+        }
     }
 
     public String getStrength() {
-        return strength;
+        if (strength.equalsIgnoreCase("null"))
+        {
+            return "-";
+        }
+        else
+        {
+            return strength;
+        }
     }
 
     public String getSpeed() {
-        return speed;
+        if (speed.equalsIgnoreCase("null"))
+        {
+            return "-";
+        }
+        else
+        {
+            return speed;
+        }
     }
 
     public String getDurability() {
-        return durability;
+        if (durability.equalsIgnoreCase("null"))
+        {
+            return "-";
+        }
+        else
+        {
+            return durability;
+        }
     }
 
     public String getPower() {
-        return power;
+        if (power.equalsIgnoreCase("null"))
+        {
+            return "-";
+        }
+        else
+        {
+            return power;
+        }
     }
 
     public String getCombat() {
-        return combat;
+        if (combat.equalsIgnoreCase("null"))
+        {
+            return "-";
+        }
+        else
+        {
+            return combat;
+        }
     }
 }
