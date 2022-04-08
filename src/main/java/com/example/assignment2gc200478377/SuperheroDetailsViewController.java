@@ -6,6 +6,8 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.io.IOException;
+
 public class SuperheroDetailsViewController {
 
     @FXML
@@ -55,6 +57,12 @@ public class SuperheroDetailsViewController {
 
     @FXML
     private Label weightLbLabel;
+
+    @FXML
+    void backButtonClick(ActionEvent event) throws IOException
+    {
+        SceneChanger.changeScene(event, "search-superhero-view.fxml");
+    }
 
     private Result result;
 

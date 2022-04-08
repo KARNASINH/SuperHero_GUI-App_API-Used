@@ -17,7 +17,10 @@
          <left>
             <VBox spacing="10.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="300.0" text="Appearance" />
+                  <Label contentDisplay="CENTER" prefWidth="300.0" text="Appearance">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></Label>
                   <GridPane prefHeight="300.0" prefWidth="300.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -92,7 +95,7 @@
             </VBox>
          </right>
          <bottom>
-            <Button mnemonicParsing="false" text="Back" BorderPane.alignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#backButtonClick" text="Back" BorderPane.alignment="CENTER" />
          </bottom>
          <top>
             <Label fx:id="superheroTitleLabel" text="Superhero Title" BorderPane.alignment="CENTER" />
