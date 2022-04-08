@@ -1,5 +1,6 @@
 package com.example.assignment2gc200478377;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -9,6 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -32,6 +34,14 @@ public class SearchSuperheroViewController implements Initializable
 
     @FXML
     private TextField searchTextField;
+
+    @FXML
+    void getDetailsButtonOnClick(ActionEvent event) throws IOException
+    {
+        String id = listView.getSelectionModel().getSelectedItem().getId();
+        System.out.println(id);
+        SceneChanger.changeSceneWithId(event, "superhero-details-view.fxml", id);
+    }
 
 
     @Override
