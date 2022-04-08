@@ -1,14 +1,35 @@
 .root
 {
     -fx-font-size: 14px;
-    -fx-background-color: #4D4DD7;
+    -fx-background-color: #0083bf;
 }
 
 .button {
     -fx-border-radius: 15px;
     -fx-background-radius: 15px;
+    -fx-background-color: yellow;
+    -fx-text-fill: red;
 }
 
 .label {
     -fx-text-fill: white;
+}
+
+#superheroTitleLabel {
+    -fx-font-size: 20px;
+    -fx-text-fill: yellow;
+}
+
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color:derive(DEEPPINK,75%);
+    -fx-border-width: 1em;
+
+    -fx-background-radius: 1em;
+    -fx-border-radius:1em;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color:derive( BLUE,50%);
+    -fx-background-radius: 1em;
 }

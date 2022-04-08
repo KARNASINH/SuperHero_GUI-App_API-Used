@@ -68,6 +68,7 @@ public class SuperheroDetailsViewController
     @FXML
     private Label weightLbLabel;
 
+
     /**
      * This method take user to the first scene with initial view and allow user to search superhero.
      */
