@@ -43,6 +43,7 @@ public class SearchSuperheroViewController implements Initializable
         listView.getSelectionModel().selectedItemProperty().addListener(
                 (obs, oldSuperheroSelected, newSuperheroSelected) ->
                 {
+                    getDetailsButton.setVisible(true);
                     try
                     {
                         imageView.setImage(new Image(newSuperheroSelected.getImage().getUrl()));
@@ -72,7 +73,6 @@ public class SearchSuperheroViewController implements Initializable
         else
         {
             notFoundLabel.setText("Super Hero not found");
-            imageView.setImage(new Image("https://ih1.redbubble.net/image.1893341687.8294/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg"));
         }
     }
 
