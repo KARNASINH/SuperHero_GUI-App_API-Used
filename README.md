@@ -31,6 +31,8 @@ Once they click on the search button it will give you the list of Superheros fro
  ![2](https://user-images.githubusercontent.com/75551627/182512346-19d4e80c-e7d2-4085-8b73-1645164f24e6.JPG)
  
  Statistics and Appearance of the Selected SuperHero
+ 
+![3](https://user-images.githubusercontent.com/75551627/182512811-1451e2c9-90dd-4e53-b16c-329aa79f2c92.JPG)
 
 
 
